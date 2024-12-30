@@ -79,7 +79,8 @@ fieldset legend {
     align-items: center;
 }
 
-.input-wrapper label {
+.input-wrapper label,
+.input-checkbox {
     color: rgb(7, 87, 44);
     font-family: "Open Sans", serif;
     font-size: 1.0em;
@@ -93,6 +94,7 @@ fieldset legend {
     height: 30px;
     border-radius: 8px;
     padding: 0 24px;
+    width: 100%;
 
     border: 1px solid #E6E6F0;
     margin-bottom: 8px;
