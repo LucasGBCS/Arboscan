@@ -4,128 +4,132 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="page">
         <header>
-            <img src="./img/logo-arbor-scan-768x628.png" alt="">
+            <img src="./img/logo-arbor-scan-768x628.png" alt="Logo">
         </header>
 
-        <Form>
-            <Fieldset>
+        <form>
+            <fieldset>
                 <legend>Inventário<br/>Bolognani City</legend>
                 
                 <div class="fieldset-wrapper">
                     <div class="input-wrapper">
-                        <Label for="event-Appraiser">Avaliador</Label>
-                        <input type="text" name="event-Appraiser" id="event-Appraiser">
+                        <label for="event-Appraiser">Avaliador</label>
+                        <input type="text" name="event-Appraiser" id="event-Appraiser" required>
                     </div>
+
                     <div class="input-wrapper">
-                        <Label for="event-city">Bairro</Label>                        
-                        <select name="event-city" id="event-city">
+                        <label for="event-city">Bairro</label>                        
+                        <select name="event-city" id="event-city" required>
+                            <option value="">Selecione o bairro</option>
                             <option value="centro">Centro</option>
                             <option value="vila-fatima">Vila Fatima</option>
                         </select>
                     </div>
+
                     <div class="input-wrapper">
-                        <Label for="event-address">Logradouro</Label>                        
-                        <select name="event-address" id="event-address">
+                        <label for="event-address">Logradouro</label>                        
+                        <select name="event-address" id="event-address" required>
+                            <option value="">Selecione o logradouro</option>
                             <option value="av.antonio-diederichsen">Av. Antonio Diederichsen</option>
                             <option value="stelio-machado">R. Stelio Machado Loureiro</option>
                         </select>
                     </div>
+
                     <div class="number-radio">
                         <div class="input-number">
-                            <Label for="event-Number">Número do Imóvel</Label>
-                            <input type="number" name="event-Number" id="event-Number">
+                            <label for="event-Number">Número do Imóvel</label>
+                            <input type="number" name="event-Number" id="event-Number" placeholder="Digite o número" required>
                         </div>
-
+                    
                         <div class="radio-group1">
                             <p>Lado</p>
                             <div class="input-radio">
-                                <Label for="event-side-par">
-                                <input type="radio" name="event-side" id="event-side-par">
-                                Par
-                                </Label>
+                                <label for="event-side-par">
+                                    <input type="radio" name="event-side" id="event-side-par" required>
+                                    Par
+                                </label>
                             </div>
                             <div class="input-radio">    
-                                <Label for="event-side-impar">
-                                <input type="radio" name="event-side" id="event-side-impar">
-                                Impar
-                                </Label>
+                                <label for="event-side-impar">
+                                    <input type="radio" name="event-side" id="event-side-impar" required>
+                                    Impar
+                                </label>
                             </div>
                         </div>
-
                     </div>
+
                     <div class="input-wrapper">
-                        <Label for="event-Reference">Referência</Label>
+                        <label for="event-Reference">Referência</label>
                         <input type="text" name="event-Reference" id="event-Reference">
                     </div>
-                    <div class="input-wrapper">
+
+                    <div class="analysis-section">
                         <h2>O que vamos analisar?</h2>
-                    </div>
-                    
-                    <div class="radio-group">
-                        <label for="arvore">
-                            <input type="radio" id="arvore" name="analise" value="arvore">
-                            Árvore
-                        </label>
-                    </div>
-                    <div class="radio-group">
-                        <label for="frutifera">
-                            <input type="radio" id="frutifera" name="analise" value="frutifera">
-                            Frutífera
-                        </label>
-                    </div>
-                    <div class="radio-group">
-                        <label for="arbusto">
-                            <input type="radio" id="arbusto" name="analise" value="arbusto">
-                            Arbusto
-                        </label>
-                    </div>
-                    <div class="radio-group">
-                        <label for="palmeira">
-                            <input type="radio" id="palmeira" name="analise" value="palmeira">
-                            Palmeira
-                        </label>
-                    </div>
-                    <div class="radio-group">
-                        <label for="vegetal_morto">
-                            <input type="radio" id="vegetal_morto" name="analise" value="vegetal_morto">
-                            Vegetal morto
-                        </label>
-                    </div>
-                    <div class="radio-group">
-                        <label for="tronco_cortado">
-                            <input type="radio" id="tronco_cortado" name="analise" value="tronco_cortado">
-                            Resto de tronco cortado
-                        </label>
-                    </div>
-                    <div class="radio-group">
-                        <label for="estipe_cortado">
-                            <input type="radio" id="estipe_cortado" name="analise" value="estipe_cortado">
-                            Resto de estipe cortado
-                        </label>
+                        
+                        <div class="radio-group">
+                            <label for="arvore">
+                                <input type="radio" id="arvore" name="analise" value="arvore" required>
+                                Árvore
+                            </label>
+                        </div>
+                        
+                        <div class="radio-group">
+                            <label for="frutifera">
+                                <input type="radio" id="frutifera" name="analise" value="frutifera">
+                                Frutífera
+                            </label>
+                        </div>
+                        
+                        <div class="radio-group">
+                            <label for="arbusto">
+                                <input type="radio" id="arbusto" name="analise" value="arbusto">
+                                Arbusto
+                            </label>
+                        </div>
+                        
+                        <div class="radio-group">
+                            <label for="palmeira">
+                                <input type="radio" id="palmeira" name="analise" value="palmeira">
+                                Palmeira
+                            </label>
+                        </div>
+                        
+                        <div class="radio-group">
+                            <label for="vegetal_morto">
+                                <input type="radio" id="vegetal_morto" name="analise" value="vegetal_morto">
+                                Vegetal morto
+                            </label>
+                        </div>
+                        
+                        <div class="radio-group">
+                            <label for="tronco_cortado">
+                                <input type="radio" id="tronco_cortado" name="analise" value="tronco_cortado">
+                                Resto de tronco cortado
+                            </label>
+                        </div>
+                        
+                        <div class="radio-group">
+                            <label for="estipe_cortado">
+                                <input type="radio" id="estipe_cortado" name="analise" value="estipe_cortado">
+                                Resto de estipe cortado
+                            </label>
+                        </div>
                     </div>
 
-                    
+                    <div class="button-style">
+                        <button type="submit">Enviar</button>
+                    </div>
                 </div>
-            </Fieldset>
-            <div class="button-style">
-                <button type="submit">Enviar</button>
-
-            </div>
-        </Form>
-
+            </fieldset>
+        </form>
     </div>
-
-
-    
 </body>
 </html>

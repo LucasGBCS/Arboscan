@@ -3,12 +3,18 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 :root {
     --color1: #096633;
+    --color2: #0b884455;
+    --color3: #064d26;
+    --color4: #e8f5e9; /* hover no dropdown */
+    --color5: #c8e6c9; /* green quando selecionar */
+    --form-bg: rgba(255, 255, 255, 0.8);
 }
 
 body, input, select, textarea {
-        font-family: "Open Sans", serif;
+    font-family: "Open Sans", serif;
 }
 
 body::before {
@@ -21,174 +27,217 @@ body::before {
     background-image: url('./img/bg.png');
     background-size: cover;
     background-position: center;
-    background-size: cover;
-    opacity: 0.5; /* Ajuste a opacidade conforme necessário */
-
+    opacity: 0.5;
     z-index: -1;
 }
 
 .page {
-    width: 95vw;
-    min-width: 80vw;
+    width: 90%;
+    max-width: 800px;
     margin: 0 auto;
+    padding: 20px;
 }
 
 header {
     text-align: center;
-    
-    display: flex;
-    justify-content: center;
-
+    margin-bottom: 2rem;
 }
 
 header img {
-    width: 50vw;
-    margin: 0 auto;
-    margin-top: 10%;
-    margin-bottom: 5%;
+    width: 300px;
+    max-width: 100%;
+    margin: 2rem auto;
 }
 
-form{
-    border-radius: 8px 8px 8px 8px;
-    background-color: rgba(221, 236, 228, 0.411);
-    min-height: 200px;
-    
-
-    display: flex;
-    flex-direction: column;
-    padding: 0.5em;
-    gap: 30px;
-    text-transform: uppercase;
+form {
+    background-color: var(--form-bg);
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 fieldset {
-    border: 0;
+    border: none;
+    padding: 0;
 }
 
-fieldset legend {
-    font-family: "League Spartan", serif;
-    font-size: 26px;
-    text-align: center;
-    line-height: 34px;
+legend {
+    font-size: 1.8rem;
     color: var(--color1);
-    border-bottom: 1px solid #E6E6F0;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2rem;
     width: 100%;
-    margin-bottom: 20px;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--color2);
+}
+
+.fieldset-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 .input-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
-    
+    gap: 0.5rem;
 }
 
-.input-wrapper input,
-.input-wrapper label,
-.input-radio,
-.input-wrapper select,
-.input-number,
-.radio-group,
-.input-wrapper h2,
-.input-wrapper p,
-.radio-group1 p {
-    color: rgb(7, 87, 44);
-    font-family: "Open Sans", serif;
-    font-size: 1.2em;
-    font-weight: 600;
-    font-style: bolder;
-    line-height: 24px;
-    margin-bottom: 0.8em;
-    
-    
+.input-wrapper label {
+    color: var(--color3);
+    font-weight: 500;
 }
 
-.input-wrapper input {
-    
-    height: 30px;
-    border-radius: 8px;
-    padding: 0 24px;
-    width: 95%;
-
-    border: 1px solid #E6E6F0;
-    margin-bottom: 8px;
-    text-align: center;
-    
+input, select {
+    height: 40px;
+    padding: 0 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
 }
 
-.input-wrapper select {
-    width: 95%;
-    font-size: 1.2em;
-    text-align: center;
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--color1);
+    box-shadow: 0 0 0 2px var(--color2);
+}
+
+select option {
+    background-color: white;
+    color: var(--color3);
+}
+
+select option:checked {
+    background-color: var(--color5);
+    color: var(--color3);
+}
+
+select option:hover {
+    background-color: var(--color4);
+    color: var(--color3);
+}
+
+select:focus option:hover {
+    background-color: var(--color4);
 }
 
 .number-radio {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 30px;
-
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+    align-items: start;
 }
+
+.radio-group1 {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.radio-group1 p {
+    margin-bottom: 0.5rem;
+    color: var(--color3);
+    font-weight: 500;
+}
+
+.radio-group {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+}
+
+.radio-group:hover {
+    border-color: var(--color1);
+    transform: translateX(5px);
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    height: 16px;
+    width: 16px;
+    accent-color: var(--color1);
+}
+
 .input-number {
-    text-align: center;
-    width: 50%;
-    
+    background-color: white;
+    padding: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.input-number label {
+    color: var(--color3);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    display: block;
 }
 
 .input-number input {
-    width: 30vw;
-    height: 40px;
-    border-radius: 8px;
-    padding: 0 5px;
-    border: 1px solid #E6E6F0;
-    margin-bottom: 8px;
-    margin-top: 8px;
-    text-align: center;
-    font-size: 1.2em;
+    width: 100%;
+    margin-top: 0.5rem;
 }
-.input-number input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
- }
-.input-radio {
 
+input[type="number"] {
+    -moz-appearance: textfield;
 }
-.input-radio label {
-    display: flex;
-    
-    
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
-.input-wrapper h2 {
-    margin-top: 2%;
-}
-.radio-group {
-    margin-top: 0.5em;
-    padding-left: 0.5em;
+
+h2 {
+    color: var(--color1);
+    font-size: 1.2rem;
+    margin: 1rem 0;
 }
 
 .button-style {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1.5em;
-    
+    margin-top: 2rem;
+    text-align: center;
 }
 
-.button-style button {
+button {
     background-color: var(--color1);
-    border-radius: 8px;
-    border: none;
     color: white;
-    cursor: pointer;
-    font-family: "Open Sans", serif;
-    font-size: 1.2em;
+    padding: 1rem 3rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
     font-weight: 600;
-    line-height: 24px;
-    margin-bottom: 0.8em;
-    padding: 10px 20px;
-    text-align: center;
-    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
-.button-style button:hover {
-    background-color: #064623;
+
+button:hover {
+    background-color: var(--color3);
+    transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+    .number-radio {
+        grid-template-columns: 1fr;
+    }
+    
+    .page {
+        width: 95%;
+        padding: 10px;
+    }
+    
+    form {
+        padding: 1rem;
+    }
 }
