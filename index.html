@@ -44,21 +44,72 @@
                         <Label for="event-Number">Número do Imóvel</Label>
                         <input class="input-number" type="number" name="event-Number" id="event-Number">
                     </div>
-                    <div class="input-wrapper">
-                        <label>Lado</label>
-                    </div>
+
                     <div class="input-radio">
-                        
+                        <p>Lado</p>
+                        <Label for="event-side-par">
                         <input type="radio" name="event-side" id="event-side-par">
-                        <Label for="event-side-par">Par</Label>
-                        
+                        Par
+                        </Label>
+                    </div>
+                    <div class="input-radio">    
+                        <Label for="event-side-impar">
                         <input type="radio" name="event-side" id="event-side-impar">
-                        <Label for="event-side-impar">Impar</Label>
+                        Impar
+                        </Label>
                     </div>
                     <div class="input-wrapper">
                         <Label for="event-Reference">Referência</Label>
                         <input type="text" name="event-Reference" id="event-Reference">
                     </div>
+                    <div class="input-wrapper">
+                        <h2>O que vamos analisar?</h2>
+                    </div>
+                    
+                    <div class="radio-group">
+                        <label for="arvore">
+                            <input type="radio" id="arvore" name="analise" value="arvore">
+                            Árvore
+                        </label>
+                    </div>
+                    <div class="radio-group">
+                        <label for="frutifera">
+                            <input type="radio" id="frutifera" name="analise" value="frutifera">
+                            Frutífera
+                        </label>
+                    </div>
+                    <div class="radio-group">
+                        <label for="arbusto">
+                            <input type="radio" id="arbusto" name="analise" value="arbusto">
+                            Arbusto
+                        </label>
+                    </div>
+                    <div class="radio-group">
+                        <label for="palmeira">
+                            <input type="radio" id="palmeira" name="analise" value="palmeira">
+                            Palmeira
+                        </label>
+                    </div>
+                    <div class="radio-group">
+                        <label for="vegetal_morto">
+                            <input type="radio" id="vegetal_morto" name="analise" value="vegetal_morto">
+                            Vegetal morto
+                        </label>
+                    </div>
+                    <div class="radio-group">
+                        <label for="tronco_cortado">
+                            <input type="radio" id="tronco_cortado" name="analise" value="tronco_cortado">
+                            Resto de tronco cortado
+                        </label>
+                    </div>
+                    <div class="radio-group">
+                        <label for="estipe_cortado">
+                            <input type="radio" id="estipe_cortado" name="analise" value="estipe_cortado">
+                            Resto de estipe cortado
+                        </label>
+                    </div>
+
+                    
                 </div>
             </Fieldset>
         </Form>
