@@ -6,8 +6,7 @@
 :root {
     --color1: #096633;
 }
-    /* font-family: "League Spartan", serif;
-    font-family: "Open Sans", serif; */
+
 body, input, select, textarea {
         font-family: "Open Sans", serif;
 }
@@ -29,7 +28,7 @@ body::before {
 }
 
 .page {
-    width: 92vw;
+    width: 95vw;
     min-width: 80vw;
     margin: 0 auto;
 }
@@ -81,21 +80,28 @@ fieldset legend {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    
     
 }
 
 .input-wrapper label,
 .input-radio,
 .input-wrapper select,
+.input-number,
 .radio-group,
-.input-wrapper h2{
+.input-wrapper h2,
+.input-wrapper p,
+.radio-group1 p {
     color: rgb(7, 87, 44);
     font-family: "Open Sans", serif;
-    font-size: 1.3em;
+    font-size: 1.2em;
     font-weight: 600;
     font-style: bolder;
     line-height: 24px;
-    margin-bottom: 8px;
+    margin-bottom: 0.8em;
+    
+    
 }
 
 .input-wrapper input {
@@ -103,35 +109,85 @@ fieldset legend {
     height: 30px;
     border-radius: 8px;
     padding: 0 24px;
-    width: 100%;
+    width: 95%;
 
     border: 1px solid #E6E6F0;
     margin-bottom: 8px;
+    text-align: center;
     
 }
 
 .input-wrapper select {
-    width: 100%;
-    font-size: 1.3em;
+    width: 95%;
+    font-size: 1.2em;
     text-align: center;
 }
-.input-wrapper .input-number {
+
+.number-radio {
     display: flex;
-    justify-items: start;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+
 }
-
-.input-radio {
-
+.input-number {
+    text-align: center;
+    width: 50%;
     
 }
 
+.input-number input {
+    width: 30vw;
+    height: 40px;
+    border-radius: 8px;
+    padding: 0 5px;
+    border: 1px solid #E6E6F0;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    text-align: center;
+    font-size: 1.2em;
+}
+.input-number input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+ }
+.input-radio {
+
+}
 .input-radio label {
-    margin-right: 10px;
+    display: flex;
+    
+    
 }
 .input-wrapper h2 {
     margin-top: 2%;
 }
 .radio-group {
     margin-top: 0.5em;
-    padding-left: 1em;
+    padding-left: 0.5em;
+}
+
+.button-style {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5em;
+    
+}
+
+.button-style button {
+    background-color: var(--color1);
+    border-radius: 8px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-family: "Open Sans", serif;
+    font-size: 1.2em;
+    font-weight: 600;
+    line-height: 24px;
+    margin-bottom: 0.8em;
+    padding: 10px 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.button-style button:hover {
+    background-color: #064623;
 }

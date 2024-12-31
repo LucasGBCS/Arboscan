@@ -40,23 +40,28 @@
                             <option value="stelio-machado">R. Stelio Machado Loureiro</option>
                         </select>
                     </div>
-                    <div class="input-wrapper">
-                        <Label for="event-Number">Número do Imóvel</Label>
-                        <input class="input-number" type="number" name="event-Number" id="event-Number">
-                    </div>
+                    <div class="number-radio">
+                        <div class="input-number">
+                            <Label for="event-Number">Número do Imóvel</Label>
+                            <input type="number" name="event-Number" id="event-Number">
+                        </div>
 
-                    <div class="input-radio">
-                        <p>Lado</p>
-                        <Label for="event-side-par">
-                        <input type="radio" name="event-side" id="event-side-par">
-                        Par
-                        </Label>
-                    </div>
-                    <div class="input-radio">    
-                        <Label for="event-side-impar">
-                        <input type="radio" name="event-side" id="event-side-impar">
-                        Impar
-                        </Label>
+                        <div class="radio-group1">
+                            <p>Lado</p>
+                            <div class="input-radio">
+                                <Label for="event-side-par">
+                                <input type="radio" name="event-side" id="event-side-par">
+                                Par
+                                </Label>
+                            </div>
+                            <div class="input-radio">    
+                                <Label for="event-side-impar">
+                                <input type="radio" name="event-side" id="event-side-impar">
+                                Impar
+                                </Label>
+                            </div>
+                        </div>
+
                     </div>
                     <div class="input-wrapper">
                         <Label for="event-Reference">Referência</Label>
@@ -112,6 +117,10 @@
                     
                 </div>
             </Fieldset>
+            <div class="button-style">
+                <button type="submit">Enviar</button>
+
+            </div>
         </Form>
 
     </div>
