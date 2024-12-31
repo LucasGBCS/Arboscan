@@ -24,17 +24,38 @@
                 <div class="fieldset-wrapper">
                     <div class="input-wrapper">
                         <Label for="event-Appraiser">Avaliador</Label>
-                        <input type="text" id="event-Appraiser">
+                        <input type="text" name="event-Appraiser" id="event-Appraiser">
                     </div>
                     <div class="input-wrapper">
                         <Label for="event-city">Bairro</Label>                        
                         <select name="event-city" id="event-city">
                             <option value="centro">Centro</option>
                             <option value="vila-fatima">Vila Fatima</option>
-
                         </select>
                     </div>
-
+                    <div class="input-wrapper">
+                        <Label for="event-address">Logradouro</Label>                        
+                        <select name="event-address" id="event-address">
+                            <option value="av.antonio-diederichsen">Av. Antonio Diederichsen</option>
+                            <option value="stelio-machado">R. Stelio Machado Loureiro</option>
+                        </select>
+                    </div>
+                    <div class="input-wrapper">
+                        <Label for="event-Number">Número do Imóvel</Label>
+                        <input class="input-number" type="number" name="event-Number" id="event-Number">
+                    </div>
+                    <div class="input-wrapper">
+                        <label>Lado</label>
+                    </div>
+                    <div class="input-radio">
+                        
+                        <input type="radio" name="event-side" id="event-side">
+                        <Label for="event-side">Par</Label>
+                        
+                        <input type="radio" name="event-side" id="event-side">
+                        <Label for="event-side">Impar</Label>
+                    </div>
+                    
                 </div>
             </Fieldset>
         </Form>

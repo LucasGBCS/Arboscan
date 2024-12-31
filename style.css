@@ -16,7 +16,7 @@ body {
     
 body::before {
     content: "";
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -26,12 +26,14 @@ body::before {
     background-position: center;
     background-size: cover;
     opacity: 0.5; /* Ajuste a opacidade conforme necessário */
+    
     z-index: -1;
 }
 
 
 .page {
     width: 80vw;
+    min-width: 80vw;
     margin: 0 auto;
 }
 header {
@@ -52,10 +54,11 @@ form{
     border-radius: 8px 8px 0px 0px;
     background-color: rgba(221, 236, 228, 0.411);
     min-height: 200px;
+    
 
     display: flex;
     flex-direction: column;
-    padding: 2% 10%;
+    padding: 1em;
     gap: 30px;
     text-transform: uppercase;
 }
@@ -80,7 +83,8 @@ fieldset legend {
 }
 
 .input-wrapper label,
-.input-checkbox {
+.input-radio,
+.input-wrapper select {
     color: rgb(7, 87, 44);
     font-family: "Open Sans", serif;
     font-size: 1.0em;
@@ -99,3 +103,21 @@ fieldset legend {
     border: 1px solid #E6E6F0;
     margin-bottom: 8px;
 }
+
+.input-radio {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5%;
+    
+}
+.input-radio label {
+    margin-right: 10px
+    
+}
+.input-radio input {
+    
+}
+    
+
