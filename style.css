@@ -85,6 +85,7 @@ fieldset legend {
     
 }
 
+.input-wrapper input,
 .input-wrapper label,
 .input-radio,
 .input-wrapper select,
@@ -110,7 +111,6 @@ fieldset legend {
     border-radius: 8px;
     padding: 0 24px;
     width: 95%;
-    font-size: 1.2em;
 
     border: 1px solid #E6E6F0;
     margin-bottom: 8px;
