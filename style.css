@@ -47,7 +47,7 @@ body::before {
 }
 
 .page {
-    width: 100%;
+    width: 95%;
     max-width: 24rem; /* 560px */
     margin: 0 auto;
     padding: var(--gap);
@@ -170,14 +170,20 @@ button:hover {
 
 @media (min-width: 600px) {
     .page {
-        max-width: 60%;
-        
+        max-width: 85%;
     }
-    .input-wrapper input,
-    .input-wrapper select{
-        
-        
+ 
+    .input-radio label {
+        gap: 0.75rem; /* Espaçamento entre o botão e o texto */
+        font-size: 1.8rem; /* Consistência no tamanho da fonte */
     }
+}
+
+@media (min-width: 900px) {
+    .page {
+        max-width: 50%;
+    }
+ 
     .input-radio label {
         gap: 0.75rem; /* Espaçamento entre o botão e o texto */
         font-size: 1.8rem; /* Consistência no tamanho da fonte */
