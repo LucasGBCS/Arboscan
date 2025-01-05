@@ -111,6 +111,7 @@ fieldset legend {
     padding: 0 1.25rem; /* 20px */
     font-size: var(--font-size-body);
     margin-bottom: 1.4rem;
+    color: var(--color1);
 }
 .input-wrapper select {
     padding: 0,8rem;
@@ -143,9 +144,6 @@ fieldset legend {
     accent-color: var(--color1); /* Define a cor personalizada */
 }
 
-
-
-
 .button-style {
     display: flex;
     justify-content: center;
@@ -172,15 +170,16 @@ button:hover {
 
 @media (min-width: 600px) {
     .page {
-        max-width: 80%;;
+        max-width: 60%;
+        
     }
-    .input-wrapper input{
-        width: 50%;
-        padding: 0.5rem;
+    .input-wrapper input,
+    .input-wrapper select{
+        
+        
     }
     .input-radio label {
         gap: 0.75rem; /* Espaçamento entre o botão e o texto */
         font-size: 1.8rem; /* Consistência no tamanho da fonte */
     }
-
 }
